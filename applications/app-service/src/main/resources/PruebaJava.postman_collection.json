@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "c97970d3-9beb-4e28-a1bd-dc780cacf83c",
+		"name": "PruebaJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26026124"
+	},
+	"item": [
+		{
+			"name": "PersonClient",
+			"item": [
+				{
+					"name": "Persons",
+					"item": [
+						{
+							"name": "CreatePerson",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"name\": \"Juanchito 2\",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": 30,\r\n    \"documentId\": \"21354565\",\r\n    \"address\": \"Av Falsa 123\",\r\n    \"phoneNumber\": \"311 448 3050\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdatePerson",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Leonardo Perez Roney \",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": 30,\r\n    \"documentId\": \"21354565\",\r\n    \"address\": \"Av Falsa 123\",\r\n    \"phoneNumber\": \"311 448 3050\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/persons/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"persons",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllPersons",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/persons",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetPersonsById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/persons/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"persons",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeletePersonsById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/persons/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"persons",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Clients",
+					"item": [
+						{
+							"name": "CreateClient",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"state\": true,\r\n    \"password\": \"1245\",\r\n    \"person\": {\r\n        \"name\": \"Juan Osorio\",\r\n        \"gender\": \"Masculino\",\r\n        \"age\": 40,\r\n        \"documentId\": \"10003\",\r\n        \"address\": \"13 junio y Equinoccial\",\r\n        \"phoneNumber\": \"098874587\",\r\n        \"state\": true\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateClient",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \r\n    \"password\": \"12ff\",\r\n    \"state\": true,\r\n    \"person\": {\r\n        \"name\": \"Joaquina Guzman\",\r\n        \"gender\": \"Femenina\",\r\n        \"age\": 31,\r\n        \"documentId\": \"123456789000\",\r\n        \"address\": \"123 Main Street south\",\r\n        \"phoneNumber\": \"123-456-7890-2\",\r\n        \"state\": true\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/clientes/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatchState",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n      \"state\": true\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/clientes/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllClients",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetClientById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/clientes/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes",
+										"17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetNameClientById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/clientes/name/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes",
+										"name",
+										"17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteClientsById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/clientes/18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"clientes",
+										"18"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AccountMovements",
+			"item": [
+				{
+					"name": "Accounts",
+					"item": [
+						{
+							"name": "GetAllAccounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAccountsById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/accounts/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"accounts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAccountsById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/accounts/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"accounts",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateAccount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n\r\n    \"numberAccount\": \"585545\",\r\n    \"type\": \"Corriente\",\r\n    \"initialBalance\": 1000,\r\n    \"state\": true,\r\n    \"clientId\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateAccount",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"numberAccount\": \"123456789\",\r\n    \"initialBalance\": 5000.00,\r\n    \"state\": true,\r\n    \"type\": \"Corriente\",\r\n    \"clientId\": 17\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/accounts/55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"accounts",
+										"55"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transactions",
+					"item": [
+						{
+							"name": "GetAllTRansactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get TransacById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/transactions/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"transactions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Number Transacs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/transactions/Number/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"transactions",
+										"Number",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get LastBalance",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/transactions/balanceT/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"transactions",
+										"balanceT",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateTransactions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"date\": \"2022-02-08\",\r\n  \"movementType\": \"Retiro\",\r\n  \"amount\": -540,\r\n  \"accountId\": \"4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/api/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get Report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/report/2?initialDate=2022-02-08&finalDate=2022-02-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"report",
+								"2"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "14",
+									"disabled": true
+								},
+								{
+									"key": "initialDate",
+									"value": "2022-02-08"
+								},
+								{
+									"key": "finalDate",
+									"value": "2022-02-10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
